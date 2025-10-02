@@ -5,6 +5,7 @@
 - resources created or configured via .ebextensions are tied to the Elastic Beanstalk environment, and they are deleted when the environment is terminated.
 - Under the hood, AWS Elastic Beanstalk uses AWS CloudFormation to provision and manage the infrastructure for your application.
 -  a lifecycle policy refers to the rules that manage application versions stored in Amazon S3. These policies help you automatically delete old versions to reduce storage costs and keep your environment clean.
+-  Cloning in AWS Elastic Beanstalk refers to the process of creating a duplicate environment based on an existing one. This is useful for testing, staging, blue/green deployments, or migrating configurations.
 
 ## Elastic Beanstalk automates:
 - Provisioning of infrastructure (like EC2, Load Balancers, Auto Scaling)
@@ -30,6 +31,9 @@
   - Rolling with Additional Batch: Adds a temporary batch of instances during deployment.Ensures full capacity is maintained.
   - Immutable: Launches a new set of instances with the new version.Swaps them in only if healthy.
   - Blue/Green Deployment: Create a clone of the environment (green). Deploy to green, test, then swap CNAME with blue (production). Zero downtime and rollback-friendly.
+  - Traffic Splitting in AWS Elastic Beanstalk is a deployment feature that allows you to gradually shift user traffic to a new application version, enabling safer and more controlled rollouts.
+ 
+
  
 
 
